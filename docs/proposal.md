@@ -32,8 +32,8 @@ Applying the GDS Design Principles to the current design of the open registers p
 
 | Principle | Application |
 | --- | --- |
-| Start with needs (user needs not government needs) | Our custodian users need to see and manage their lists, as easily as possible and using any of a wide variety of hardware and software. To promote assurance, our custodians should have access to the raw data of a register and to feel confident that this data is held within a long-lived, stable, widely-used platform. Users of register data, especially service teams, should have access to authoritative register  |
-| Do less |  |
+| Start with needs (user needs not government needs) | Our custodian users need to see and manage their lists, as easily as possible and using any of a wide variety of hardware and software. To promote assurance, our custodians should have access to the raw data of a register and to feel confident that this data is held within a long-lived, stable, widely-used platform. Users of register data, especially service teams, should have access to authoritative registers within their normal development environments. |
+| Do less | In keeping with our [architecture approach](https://governmenttechnology.blog.gov.uk/2016/07/05/introducing-our-architecture-approach-and-principles/), we should have a strong bias toward starting with simple, cloud-based tools rather than building our own things, as government is rarely unusual. Even with functionally options, the simpler solution with fewer moving parts and more commodity platforms should win. |
 | Design with data |  |
 | Do the hard work to make it simple |  |
 | Iterate. Then iterate again. |  |
