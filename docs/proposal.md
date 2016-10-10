@@ -2,7 +2,9 @@
 
 *Make things open: it makes things better*
 
-I propose that we change how the Data Infrastructure team approaches the development of the Open Registers software platform in favour of simpler and more open technical choices. This proposal applies only to the software itself, not to the work of the Registers Design Authority, nor to the register field conventions currently defined. This proposal _does_ have implications for the way registers are stored, indexed and shared, and so to avoid migration confusion, I recommend that this refactoring be carried out before the register software reaches the Live phase.
+First, I’d just like to say that I don’t wish in any way to disparage the existing work of the registers build teams — the decisions that have been made up to this point were necessary in order for us to work with real data and to learn about what real users needed. 
+
+That said, knowing what we now know, I propose that we change how the Data Infrastructure team approaches the development of the Open Registers software platform in favour of simpler and more open technical choices. This proposal applies only to the software itself, not to the work of the Registers Design Authority, nor to the register field conventions currently defined. This proposal _does_ have implications for the way registers are stored, indexed and shared, and so to avoid migration confusion, I recommend that this refactoring be carried out before the register software reaches the Live phase.
 
 This proposal outlines some brief findings from user research and from adoption discussions thus far, applies the [GDS Design Principles](https://www.gov.uk/design-principles) to the current registers architecture and then makes a specific proposal for refactoring.
 
@@ -90,7 +92,8 @@ The following scenarios would require further thinking about registers and their
 
 * The need to charge for access to a public register would require additional controls at the index layer. The core register file format could still be used in this case, but any git-based repository would need to be private rather than public, and an additional software service would need to be developed to handle the payments and permission workflow.
 
-
 ## One more thing
 
-I should also note that I don’t wish in any way to disparage the existing work of the registers build teams — the decisions that have been made up to this point were necessary in order for us to work with real data and to learn about what real users needed. The software has also supported the development of a business process around register design and custodianship which will be invaluable in getting our ideas and platforms widely used by government. Understanding the technical decisions around inspectable logs and versioning has helped to drive our understanding of our security needs, and the development of the external representation, in particular, has pointed us toward what is needed within the index service layer. This is all valuable design and learning, developed collaboratively with users, and is clearly worth the investment and time put in thus far. This proposal for refactoring should not in any way take away from the work that has been done — I simply feel that we can now iterate based on what we have learned, and as is frequent in technology projects, our next version can be better by being simpler and more open.
+I’d also like to note that the software developed thus far has supported not only a data model but the development of a business process around register design and custodianship which will be invaluable in getting our ideas and platforms widely used by government. Understanding the technical decisions around inspectable logs and versioning has helped to drive our understanding of our security needs, and the development of the external representation, in particular, has pointed us toward what is needed within the index service layer. 
+
+This is all valuable design and learning, developed collaboratively with users, and is clearly worth the investment and time put in thus far. This proposal for refactoring should not in any way take away from the work that has been done — I simply feel that we can now iterate based on what we have learned, and as is frequent in technology projects, our next version can be better by being simpler and more open.
