@@ -76,19 +76,23 @@ The list that comprises the Register will follow these conventions:
 * Fields that link to another register will be named after the key of the linked register and use the CURIE-style syntax of “schools-eng:1234”.
 * The special fields “start-date” and “end-date” will always be present. These dates indicate the day at which the entry became valid, if known, and the date at which the value became invalid or superseded, if known. The handling of these values should be respected by index services built on registers such that it is always possible to include a date as part of a query. For example, I could ask a register for all current values (with a start-date not set or in the past, and an end-date not set or in the future), or I could ask for all values that were valid at any particular date in the past. Being able to set and work with these attributes is an important part of how reference data evolves over time.
 
-
-
 ## Update scenarios
 
 There are several obvious ways for registers to be updated securely, without the development of proprietary software:
 
 * The custodian can log in and edit the list live on github.com, thus implicitly creating a new commit.
+* The custodian could have a local version of the register file on their desktop, cloned via git. The custodian could edit this file directly, either in a text editor or in a spreadsheet programme, and then commit their changes, along with suitable git commit message, using the standard github desktop software available for every major desktop and mobile operating system. Merges and conflicts will be automatically handled and the custodian’s local file remains up to date with any changes that have been made through the web interface or by another user.
+* The custodian can approve a Pull Request created by another person or system, using desktop software or through the github web interface.
+* The custodian can reject a pull request created by another user or system.
+* A system (such as Edubase) can clone our git-based register file and make changes locally. Those changes can then be either committed directly or created as a pull request through simple code.
 
 ## Future Directions
 
 The following scenarios would require further thinking about registers and their implementation:
 
 * The need to charge for access to a public register would require additional controls at the index layer. The core register file format could still be used in this case, but any git-based repository would need to be private rather than public, and an additional software service would need to be developed to handle the payments and permission workflow.
+* A workflow system could be developed to manage the process of pull requests being requested to a register.
+* Special handling could be developed to handle large registers, which would likely be split into manageable chunks based on their primary key, similar to the way AddressBase is downloaded now.
 
 ## One more thing
 
